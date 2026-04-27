@@ -1,6 +1,6 @@
 # Full-Stack Todo App
 
-This repository contains the scaffold for a deliberately small full-stack Todo application. Story 1.1 only establishes the project structure and starter tooling.
+This repository contains the scaffold for a deliberately small full-stack Todo application. Stories 1.1 and 1.2 establish the project structure, starter tooling, and baseline test infrastructure.
 
 ## Story 1.1 Scope
 
@@ -18,7 +18,7 @@ Not included yet:
 - Health endpoint logic.
 - SQLite schema or persistence logic.
 - Frontend Todo UI.
-- Backend, frontend, or E2E test coverage.
+- Real frontend, backend, or E2E journey coverage.
 - Working Docker Compose runtime.
 
 ## Environment Placeholders
@@ -66,3 +66,31 @@ npm run e2e
 ```
 
 The E2E command is present for tooling access. Real E2E journey tests are added in later stories.
+
+## Story 1.2 Test Commands
+
+Run the frontend test scaffold:
+
+```bash
+npm run frontend:test
+```
+
+Run the backend test scaffold:
+
+```bash
+npm run backend:test
+```
+
+Generate frontend coverage output:
+
+```bash
+npm run frontend:coverage
+```
+
+Generate backend coverage output:
+
+```bash
+npm run backend:coverage
+```
+
+The coverage commands are scaffolding only. The final 70 percent meaningful coverage target is reached in later implementation and QA stories.
