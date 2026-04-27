@@ -1,5 +1,5 @@
 # generated: 2026-04-27T15:43:00+01:00
-# last_updated: 2026-04-27T16:26:00+01:00
+# last_updated: 2026-04-27T16:41:00+01:00
 # project: Full-Stack Todo App
 # project_key: NOKEY
 # tracking_system: file-system
@@ -34,7 +34,7 @@
 # - Keep Docker, full CRUD, frontend UI, accessibility audit, and documentation evidence out of Sprint 1 unless needed as placeholders.
 
 generated: "2026-04-27T15:43:00+01:00"
-last_updated: "2026-04-27T16:26:00+01:00"
+last_updated: "2026-04-27T16:41:00+01:00"
 project: "Full-Stack Todo App"
 project_key: "NOKEY"
 tracking_system: "file-system"
@@ -81,7 +81,7 @@ development_status:
   1-1-initialise-project-structure-and-tooling: done
   1-2-configure-baseline-automated-test-infrastructure: done
   1-3-create-backend-app-skeleton-and-health-endpoint: done
-  1-4-create-sqlite-persistence-foundation: backlog
+  1-4-create-sqlite-persistence-foundation: done
   epic-1-retrospective: optional
   epic-2: backlog
   2-1-implement-todo-creation-api: backlog
