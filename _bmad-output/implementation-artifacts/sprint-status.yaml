@@ -1,5 +1,5 @@
 # generated: 2026-04-27T15:43:00+01:00
-# last_updated: 2026-04-27T16:41:00+01:00
+# last_updated: 2026-04-27T16:42:00+01:00
 # project: Full-Stack Todo App
 # project_key: NOKEY
 # tracking_system: file-system
@@ -29,55 +29,64 @@
 #
 # WORKFLOW NOTES:
 # ===============
-# - Sprint 1 is intentionally limited to Epic 1 foundation work.
+# - Sprint 2 is intentionally limited to Epic 2 backend Todo API and persistence work.
 # - Create and implement stories sequentially for one developer.
-# - Keep Docker, full CRUD, frontend UI, accessibility audit, and documentation evidence out of Sprint 1 unless needed as placeholders.
+# - Keep frontend UI, Playwright journeys, Docker runtime, accessibility audit, QA/security docs, README finalisation, and AI integration evidence out of Sprint 2.
 
 generated: "2026-04-27T15:43:00+01:00"
-last_updated: "2026-04-27T16:41:00+01:00"
+last_updated: "2026-04-27T16:42:00+01:00"
 project: "Full-Stack Todo App"
 project_key: "NOKEY"
 tracking_system: "file-system"
 story_location: "/Users/masoudrousta/Documents/BMAD/_bmad-output/implementation-artifacts"
 
 current_sprint:
-  name: "Sprint 1"
+  name: "Sprint 2"
   status: "planned"
-  goal: "Establish the project foundation, baseline test infrastructure, backend health endpoint, and SQLite persistence foundation without expanding into feature CRUD or frontend product UI."
+  goal: "Deliver the backend Todo API for create, list, complete, delete, and standardised safe errors without expanding into frontend, E2E journey, Docker runtime, or speculative architecture work."
   scope:
-    - "1-1-initialise-project-structure-and-tooling"
-    - "1-2-configure-baseline-automated-test-infrastructure"
-    - "1-3-create-backend-app-skeleton-and-health-endpoint"
-    - "1-4-create-sqlite-persistence-foundation"
+    - "2-1-implement-todo-creation-api"
+    - "2-2-implement-todo-list-retrieval-api"
+    - "2-3-implement-todo-completion-api"
+    - "2-4-implement-todo-deletion-api"
+    - "2-5-standardise-backend-error-handling"
   out_of_scope:
-    - "Todo CRUD API implementation beyond persistence foundation"
-    - "Frontend Todo UI implementation beyond scaffold"
-    - "Docker image hardening and Docker Compose runtime completion"
-    - "Full E2E journey coverage"
-    - "Accessibility, QA, security, README, and AI integration evidence beyond placeholders needed by setup"
-  first_story: "1-1-initialise-project-structure-and-tooling"
+    - "Epic 3 frontend Todo UI and API client work"
+    - "Epic 4 Playwright journey coverage and full coverage evidence work"
+    - "Epic 5 Docker runtime, accessibility audit, QA/security docs, README finalisation, and AI integration log"
+    - "Authentication, edit functionality, search, filtering, sorting, analytics, GraphQL, microservices, caching, shared packages, or speculative architecture"
+  first_story: "2-1-implement-todo-creation-api"
   implementation_order:
-    - story: "1-1-initialise-project-structure-and-tooling"
-      depends_on: []
-      reason: "Creates the frontend, backend, E2E, command, and environment-variable foundation needed by every later story."
-    - story: "1-2-configure-baseline-automated-test-infrastructure"
-      depends_on:
-        - "1-1-initialise-project-structure-and-tooling"
-      reason: "Adds test and coverage scaffolding once the project structure and package boundaries exist."
-    - story: "1-3-create-backend-app-skeleton-and-health-endpoint"
-      depends_on:
-        - "1-1-initialise-project-structure-and-tooling"
-        - "1-2-configure-baseline-automated-test-infrastructure"
-      reason: "Implements the first real backend route and proves the backend integration test setup."
-    - story: "1-4-create-sqlite-persistence-foundation"
+    - story: "2-1-implement-todo-creation-api"
       depends_on:
         - "1-1-initialise-project-structure-and-tooling"
         - "1-2-configure-baseline-automated-test-infrastructure"
         - "1-3-create-backend-app-skeleton-and-health-endpoint"
-      reason: "Adds SQLite schema initialisation and a small proof test after the backend skeleton exists."
+        - "1-4-create-sqlite-persistence-foundation"
+      reason: "Creates the first Todo API route, establishes validation/persistence patterns, and proves writes can be read back through the backend contract."
+    - story: "2-2-implement-todo-list-retrieval-api"
+      depends_on:
+        - "2-1-implement-todo-creation-api"
+      reason: "Adds list retrieval after creation so integration tests can verify persisted todos, response shape, ISO createdAt, boolean completed, and ordering."
+    - story: "2-3-implement-todo-completion-api"
+      depends_on:
+        - "2-1-implement-todo-creation-api"
+        - "2-2-implement-todo-list-retrieval-api"
+      reason: "Adds completion updates after create/list are available, allowing tests to verify persisted completion state through GET /api/todos."
+    - story: "2-4-implement-todo-deletion-api"
+      depends_on:
+        - "2-1-implement-todo-creation-api"
+        - "2-2-implement-todo-list-retrieval-api"
+      reason: "Adds deletion after create/list are available, allowing tests to verify deleted todos no longer appear in persisted list responses."
+    - story: "2-5-standardise-backend-error-handling"
+      depends_on:
+        - "2-1-implement-todo-creation-api"
+        - "2-3-implement-todo-completion-api"
+        - "2-4-implement-todo-deletion-api"
+      reason: "Standardises validation, not-found, and unexpected error behaviour once the main route failure paths exist."
 
 development_status:
-  epic-1: in-progress
+  epic-1: done
   1-1-initialise-project-structure-and-tooling: done
   1-2-configure-baseline-automated-test-infrastructure: done
   1-3-create-backend-app-skeleton-and-health-endpoint: done
