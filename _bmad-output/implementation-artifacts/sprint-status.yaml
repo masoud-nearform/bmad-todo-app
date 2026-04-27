@@ -1,5 +1,5 @@
 # generated: 2026-04-27T15:43:00+01:00
-# last_updated: 2026-04-27T16:57:00+01:00
+# last_updated: 2026-04-27T17:05:00+01:00
 # project: Full-Stack Todo App
 # project_key: NOKEY
 # tracking_system: file-system
@@ -34,7 +34,7 @@
 # - Keep frontend UI, Playwright journeys, Docker runtime, accessibility audit, QA/security docs, README finalisation, and AI integration evidence out of Sprint 2.
 
 generated: "2026-04-27T15:43:00+01:00"
-last_updated: "2026-04-27T16:57:00+01:00"
+last_updated: "2026-04-27T17:05:00+01:00"
 project: "Full-Stack Todo App"
 project_key: "NOKEY"
 tracking_system: "file-system"
@@ -94,7 +94,7 @@ development_status:
   epic-1-retrospective: optional
   epic-2: in-progress
   2-1-implement-todo-creation-api: done
-  2-2-implement-todo-list-retrieval-api: backlog
+  2-2-implement-todo-list-retrieval-api: done
   2-3-implement-todo-completion-api: backlog
   2-4-implement-todo-deletion-api: backlog
   2-5-standardise-backend-error-handling: backlog

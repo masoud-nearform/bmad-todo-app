@@ -1,6 +1,6 @@
 # Full-Stack Todo App
 
-This repository contains a deliberately small full-stack Todo application in progress. Stories 1.1 through 1.4 establish the scaffold, test setup, health endpoint, and SQLite foundation; Story 2.1 adds the first backend Todo API endpoint.
+This repository contains a deliberately small full-stack Todo application in progress. Stories 1.1 through 1.4 establish the scaffold, test setup, health endpoint, and SQLite foundation; Stories 2.1 and 2.2 add backend Todo creation and list retrieval.
 
 ## Story 1.1 Foundation Scope
 
@@ -17,7 +17,6 @@ Included by the foundation stories:
 Not included yet:
 
 - Full Todo CRUD API endpoints.
-- Standalone Todo list retrieval behaviour beyond creation read-back.
 - Todo completion or deletion endpoints.
 - Frontend Todo UI.
 - Real frontend Todo UI coverage or E2E journey coverage.
@@ -55,7 +54,7 @@ Run the frontend scaffold:
 npm run frontend:dev
 ```
 
-Run the backend scaffold:
+Run the backend server:
 
 ```bash
 npm run backend:dev
@@ -77,7 +76,7 @@ Run the frontend test scaffold:
 npm run frontend:test
 ```
 
-Run the backend test scaffold:
+Run the backend tests:
 
 ```bash
 npm run backend:test
@@ -95,15 +94,17 @@ Generate backend coverage output:
 npm run backend:coverage
 ```
 
-The coverage commands are scaffolding only. The final 70 percent meaningful coverage target is reached in later implementation and QA stories.
+The coverage commands generate the current frontend and backend coverage reports. The final 70 percent meaningful coverage target is confirmed in later implementation and QA stories.
 
-## Story 2.1 Backend API
+## Sprint 2 Backend API
 
 Currently implemented backend Todo API:
 
 - `POST /api/todos` creates a todo from non-empty text.
 - Creation trims text, defaults `completed` to `false`, returns `id`, `text`, `completed`, and `createdAt`, and persists the todo in SQLite.
-- `GET /api/todos` currently exists only as minimal read-back support for creation verification.
+- `GET /api/todos` returns the current todo list as a JSON array.
+- List responses include `id`, `text`, `completed`, and `createdAt`, return `completed` as booleans, and use ascending `createdAt` order.
+- `GET /api/todos` returns `[]` when no todos exist.
 
 Backend persistence uses `SQLITE_DB_PATH`, with `./data/todos.db` as the development fallback.
 

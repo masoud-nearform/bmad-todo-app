@@ -41,7 +41,7 @@ export function listTodos(): Todo[] {
 
   try {
     const rows = database
-      .prepare('SELECT id, text, completed, createdAt FROM todos')
+      .prepare('SELECT id, text, completed, createdAt FROM todos ORDER BY createdAt ASC')
       .all() as TodoRow[];
 
     return rows.map(toTodo);
