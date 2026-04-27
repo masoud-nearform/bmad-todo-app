@@ -1,0 +1,3 @@
+# Placeholder for Story 1.1.
+# Working frontend/backend services are added in the Docker Compose story.
+services: {}

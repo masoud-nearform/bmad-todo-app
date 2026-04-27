@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+coverage/
+
+# Test output
+test-results/
+playwright-report/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Local SQLite data
+*.db
+*.db-shm
+*.db-wal
+data/
+
+# Logs and OS files
+*.log
+.DS_Store
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
